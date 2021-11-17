@@ -1,0 +1,61 @@
+{
+    "name": "@nativescript/analyticskithms",
+    "version": "0.0.1",
+    "description": "Analytics Kit HMS by Huawei",
+    "main": "HMSKits",
+    "typings": "index.d.ts",
+    "nativescript": {
+      "platforms": {
+        "android": "7.0.0",
+        "ios": "7.0.0"
+      }
+    },
+    "config": {},
+    "scripts": {
+      "clean": "npx rimraf node_modules package-lock.json && npm i --ignore-scripts && ts-patch install",
+      "postinstall": "node postinstall-hooks.js && node scripts/postinstall.js",
+      "preuninstall": "node preuninstall-hooks.js",
+      "setup": "node scripts/postinstall.js setup",
+      "config": "node scripts/postinstall.js config",
+      "tsc": "ts-patch install && tsc -skipLibCheck",
+      "plugin.tscwatch": "npm run tsc -- -w",
+      "package": "cd ../publish && ./pack.sh"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/danielideriba/AnalyticsKitHMS-nativescript-plugin.git"
+    },
+    "keywords": [
+      "ecosystem:nativescript",
+      "NativeScript",
+      "AnalyticsKitHMS"
+    ],
+    "author": {
+      "name": "Daniel ideriba",
+      "email": "danielideirba@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/danielideriba/AnalyticsKitHMS-nativescript-plugin/issues"
+    },
+    "homepage": "https://github.com/danielideriba/AnalyticsKitHMS-nativescript-plugin",
+    "readmeFilename": "README.md",
+    "dependencies": {
+      "fs-extra": "~9.0.1",
+      "@nativescript/hook": "~2.0.0",
+      "@nativescript/shared-notification-delegate": "~1.0.0",
+      "prompt-lite": "~0.1.1",
+      "xcode": "~0.9.3",
+      "semver": "~7.3.2"
+    },
+    "devDependencies": {
+      "rimraf": "~3.0.2",
+      "@nativescript/core": "~7.0.13",
+      "@nativescript/types": "~7.0.4",
+      "@nativescript/webpack": "~3.0.8",
+      "tslint": "~6.1.3",
+      "typescript": "~4.0.5",
+      "ts-patch": "^1.3.0"
+    }
+  }
+  
